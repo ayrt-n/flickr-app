@@ -3,14 +3,8 @@ class StaticPagesController < ApplicationController
     if request.query_string.present?
       flickr = Flickr.new
 
-      begin
-        photostream = flickr.people.getPhotos(user_id: params[:flickr_id])
-      rescue Flickr::FailedResponse => e
-        flash.now[:error] = e.msg
-        render :index and return
-      end
-
-      @img_urls = photostream_to_url(photostream)
+      @photostream = flickr.people.getPhotos(user_id: params[:flickr_id])
+      @img_urls = photostream_to_url(@photostream)
     end
   end
 
