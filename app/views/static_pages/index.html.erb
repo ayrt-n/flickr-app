@@ -1,0 +1,12 @@
+<h2>Flickr App</h2>
+<%= form_with url: '/', method: 'get' do %>
+  <%= label_tag(:flickr_id, 'Enter Flickr id:') %>
+  <%= text_field_tag(:flickr_id) %>
+  <%= submit_tag('Search') %>
+<% end %>
+
+<% unless @img_urls.nil? %>
+  <% @img_urls.each do |img| %>
+    <%= image_tag img %>
+  <% end %>
+<% end %>
