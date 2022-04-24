@@ -1,12 +1,22 @@
-<h2>Flickr App</h2>
-<%= form_with url: '/', method: 'get' do %>
-  <%= label_tag(:flickr_id, 'Enter Flickr id:') %>
-  <%= text_field_tag(:flickr_id) %>
-  <%= submit_tag('Search') %>
-<% end %>
-
-<% unless @img_urls.nil? %>
-  <% @img_urls.each do |img| %>
-    <%= image_tag img %>
+<div class="header">
+  <h2 class="brand"><a href="/">Odin Flickr Search</a></h2>
+  <h4>Simply search and display photos from Flickr users around the world!</h3>
+</div>
+<div class="search-form-container">
+  <%= form_with url: '/', method: 'get' do %>
+    <%= label_tag(:flickr_id, 'Enter Flickr id:', class: 'hidden') %>
+    <%= text_field_tag(:flickr_id, nil, placeholder: 'Enter Flickr ID...') %>
+    <%= submit_tag('Search') %>
   <% end %>
-<% end %>
+</div>
+
+<div class="search-results-container">
+  <% if flash[:error] %>
+    <p><%= flash[:error] %></p>
+  <% end %>
+  <% unless @img_urls.nil? %>
+    <% @img_urls.each do |img| %>
+      <%= image_tag img %>
+    <% end %>
+  <% end %>
+</div>
