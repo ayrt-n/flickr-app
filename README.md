@@ -1,24 +1,11 @@
-# README
+# Odin Flickr App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+Project for The Odin Project (https://www.theodinproject.com/lessons/ruby-on-rails-flickr-api) as part of the APIs section of the Ruby on Rails course.
 
-* Ruby version
+Through this project we were tasked with building a simple web app which allows users to search and display photos from Flickr feeds.
 
-* System dependencies
+The best way to view the project is live via ________________________. Simply search a Flickr id and the website will display that users photos (if you don't know any Flickr users, try it with mine: 195468412@N02)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The project helped to provide some hands on experience working with external APIs to supplement a number of lessons on building out our own and working with external APIs. The rails app utilizes the [Flickr ruby gem](https://github.com/cyclotron3k/flickr/) which maps the methods described in the [official Flickr API documentation](https://www.flickr.com/services/api/) to ruby methods. The [Figaro ruby gem](https://github.com/laserlemon/figaro) was used to configure the API key and secret key environment variables in a secure way.
