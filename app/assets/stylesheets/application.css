@@ -13,3 +13,101 @@
  *= require_tree .
  *= require_self
  */
+
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed, 
+ figure, figcaption, footer, header, hgroup, 
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+ }
+
+ body {
+   font-family: Arial, Helvetica, sans-serif;
+ }
+
+ h2 {
+   font-size: 2rem;
+ }
+
+ h4 {
+  font-size: 1.15rem;
+ }
+
+ .header {
+   text-align: center;
+ }
+
+ .hidden {
+   display: block;
+   height: 0;
+   visibility: hidden;
+ }
+
+ .brand a {
+   text-decoration: none;
+   color: inherit;
+ }
+
+ input[type="text"] {
+   font: inherit;
+   font-size: 1rem;
+   height: 1.45rem;
+   width: 300px;
+   padding-left: 0.5rem;
+ }
+
+ .flex-centered {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ h2.brand {
+   margin: 1rem 0 0.25rem 0;
+ }
+
+ input[type="submit"] {
+  font-size: 1rem;
+  border: none;
+  height: 1.8rem;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #1e40af;
+ }
+
+ .search-form-container {
+   margin-top: 1.5rem;
+ }
+
+ input[type="submit"]:active {
+  background-color: #2c52cf;
+ }
+
+ input[type="submit"]:hover {
+  background-color: #132e87;
+ }
+
+ .search-results-container {
+   padding: 1.5rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .search-results-container > img {
+   margin-bottom: 1.5rem;
+ }
